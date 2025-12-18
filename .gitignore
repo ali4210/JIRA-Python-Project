@@ -1,0 +1,32 @@
+# ==>> Python Build & Runtime
+__pycache__/
+*.py[cod]
+*$py.class
+*.log
+
+# ==>> Virtual Environments (Essential)
+# Keep your library files out of the repo
+venv/
+env/
+.venv/
+Scripts/
+Lib/
+pyvenv.cfg
+
+# ==>> IDE Settings (PyCharm & VS Code)
+# You are using PyCharm, so .idea is critical to ignore
+.idea/
+.vscode/
+*.swp
+
+# ==>> Security & Secrets (CRITICAL)
+# Since you have hardcoded API keys in your scripts, 
+# if you decide to move them to a config file later, ignore it here:
+config.py
+secrets.py
+.env
+api_keys.txt
+
+# ==>> System Files
+.DS_Store
+Thumbs.db
