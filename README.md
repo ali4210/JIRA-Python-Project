@@ -1,8 +1,4 @@
 
-### 📄 Part 2: README.md
-*Your public face for this project.*
-
-```markdown
 # Jira Automation & DevOps Pipeline
 
 **Author:** Saleem Ali
