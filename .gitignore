@@ -30,3 +30,548 @@ api_keys.txt
 # ==>> System Files
 .DS_Store
 Thumbs.db
+
+# ============================================================================
+# .gitignore for JIRA Python Automation Project
+# ============================================================================
+# Author: Saleem Ali
+# Purpose: Prevent sensitive data and unnecessary files from being committed
+# CRITICAL: This file protects your credentials, API keys, and passwords
+# ============================================================================
+
+# ============================================================================
+# 🔒 CRITICAL SECURITY - CREDENTIALS & SECRETS
+# ============================================================================
+# NEVER commit these files - they contain sensitive authentication data
+
+# Environment variables (MOST IMPORTANT!)
+.env
+.env.local
+.env.*.local
+.env.production
+.env.development
+.env.test
+
+# Configuration files with credentials
+config/secrets.py
+config/credentials.py
+config/production.py
+credentials.json
+secrets.json
+auth.json
+
+# API Keys and Tokens
+*.apikey
+*.token
+*.key
+api_keys.txt
+tokens.txt
+
+# Passwords and authentication
+*password*
+*passwd*
+*secret*
+.secrets/
+secrets/
+
+# SSH Keys (Critical!)
+id_rsa
+id_rsa.pub
+*.pem
+*.ppk
+known_hosts
+authorized_keys
+.ssh/
+
+# SSL/TLS Certificates
+*.crt
+*.cer
+*.ca-bundle
+*.p12
+*.pfx
+*.p7b
+
+# Database connection strings
+database.ini
+db_config.py
+connection_strings.txt
+
+# JIRA specific credentials (from your project)
+jira_api_key.txt
+jira_credentials.py
+
+# Email credentials (from your project)
+email_password.txt
+smtp_config.py
+
+# ============================================================================
+# 🐍 PYTHON SPECIFIC
+# ============================================================================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff (if you expand to web later)
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff (if you expand to web later)
+instance/
+.webassets-cache
+
+# Scrapy stuff (if you add web scraping)
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# poetry
+poetry.lock
+
+# pdm
+.pdm.toml
+
+# PEP 582
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# ============================================================================
+# 📝 LOGS AND TEMPORARY FILES
+# ============================================================================
+
+# Log files (from your automation scripts)
+*.log
+logs/
+*.log.*
+automation.log
+automation.log.*
+error.log
+debug.log
+jira_automation.log
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Backup files
+*.bak
+*.backup
+*.old
+*_backup
+*_old
+
+# Cache files
+.cache/
+cache/
+*.cache
+
+# ============================================================================
+# 💾 DATABASE FILES
+# ============================================================================
+
+# SQLite databases
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+
+# Other database files
+*.mdb
+*.accdb
+
+# ============================================================================
+# 🖥️ IDE AND EDITOR SPECIFIC
+# ============================================================================
+
+# PyCharm (Your IDE!)
+.idea/
+*.iml
+*.iws
+*.ipr
+.idea_modules/
+out/
+
+# VS Code
+.vscode/
+*.code-workspace
+.history/
+
+# Visual Studio
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+.vs/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+Session.vim
+Sessionx.vim
+.netrwhist
+tags
+[._]*.un~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Eclipse
+.settings/
+.metadata/
+.classpath
+.project
+*.launch
+
+# NetBeans
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# JetBrains IDEs (IntelliJ, WebStorm, etc.)
+.idea/
+*.iml
+cmake-build-*/
+.idea_modules/
+
+# ============================================================================
+# 🖼️ OPERATING SYSTEM FILES
+# ============================================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.directory
+.Trash-*
+.nfs*
+
+# ============================================================================
+# 📦 PROJECT SPECIFIC (Your JIRA Automation)
+# ============================================================================
+
+# Downloaded attachments (from your scripts)
+downloads/
+attachments/
+uploaded_files/
+
+# Generated reports
+reports/
+*.csv
+*.xlsx
+report_*.txt
+
+# Test data
+test_data/
+sample_data/
+
+# Email templates with sensitive data
+templates/*_production.html
+templates/private/
+
+# Server monitoring data
+monitoring_data/
+server_logs/
+
+# SSH connection logs
+ssh_logs/
+
+# Email queue
+email_queue/
+
+# Processed tickets log
+processed_tickets.json
+ticket_history.json
+
+# Performance metrics
+metrics/
+*.metrics
+
+# ============================================================================
+# 📊 DATA FILES (Potentially Sensitive)
+# ============================================================================
+
+# JSON files that might contain sensitive data
+config.json
+settings.json
+users.json
+*_config.json
+
+# YAML configuration files
+*.yml
+*.yaml
+config.yaml
+secrets.yaml
+
+# INI configuration files
+*.ini
+config.ini
+
+# XML configuration files (if used)
+config.xml
+settings.xml
+
+# ============================================================================
+# 🔧 BUILD AND DEPLOYMENT
+# ============================================================================
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+
+# Kubernetes
+*-secret.yaml
+*-secrets.yaml
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+*.tfvars
+
+# Ansible
+*.retry
+inventory/production/
+vault_password.txt
+
+# ============================================================================
+# 📚 DOCUMENTATION BUILD FILES
+# ============================================================================
+
+# Sphinx build
+docs/_build/
+docs/_static/
+docs/_templates/
+
+# MkDocs
+site/
+
+# ============================================================================
+# 🧪 TESTING AND COVERAGE
+# ============================================================================
+
+# Test results
+.tox/
+.pytest_cache/
+.coverage
+htmlcov/
+test-results/
+*.cover
+
+# Mock data used in tests (if sensitive)
+tests/fixtures/production_data/
+tests/mocks/real_credentials/
+
+# ============================================================================
+# 📦 PACKAGE MANAGER FILES
+# ============================================================================
+
+# npm (if you add frontend later)
+node_modules/
+package-lock.json
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Composer (PHP, unlikely but included)
+vendor/
+composer.lock
+
+# ============================================================================
+# 🎯 CUSTOM IGNORE PATTERNS (Add your specific needs)
+# ============================================================================
+
+# Add any project-specific files below
+# Examples:
+# my_custom_config.py
+# production_data/
+# client_specific_data/
+
+# ============================================================================
+# ✅ IMPORTANT NOTES
+# ============================================================================
+# 
+# 1. ALWAYS review files before committing:
+#    git status
+#    git diff
+#
+# 2. If you accidentally committed secrets:
+#    - Rotate ALL credentials immediately
+#    - Use git-filter-branch or BFG Repo-Cleaner to remove from history
+#    - Force push: git push --force
+#
+# 3. Use git secrets tool to prevent commits with secrets:
+#    https://github.com/awslabs/git-secrets
+#
+# 4. Before making repository public:
+#    - Double-check no credentials in history
+#    - Review all files manually
+#    - Run credential scanners
+#
+# 5. Keep this .gitignore file updated as project grows
+#
+# ============================================================================
+
+# End of .gitignore
